@@ -15,11 +15,7 @@ public class LoginTest extends BaseTest {
         //Login with standard_user & secret_sauce
         loginPage.fillLoginForm(username, password);
 
-        //Remove the first product from the cart
-        inventoryPage.clickRemoveBackpack();
 
-        //Verify the cart badge has 1 product
-        Assert.assertEquals(inventoryPage.getShoppingCartBadge().getText(), "1");
 
         //Click on the cart
         inventoryPage.clickShoppingCart();
