@@ -24,6 +24,9 @@ public class BaseTest {
     InventoryPage inventoryPage;
     CartPage cartPage;
 
+    protected final String username = "standard_user";
+
+    protected final String password = "secret_sauce";
     @BeforeClass
     public void beforeClass() {
         ChromeOptions options = new ChromeOptions();
