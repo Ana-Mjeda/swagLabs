@@ -3,10 +3,10 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SortTest extends BaseTest{
+public class SortTest extends BaseTest {
 
     @Test
-    public void sortPriceFromLowToHigh(){
+    public void sortPriceFromLowToHigh() {
 
         loginPage.fillLoginForm(username, password);
 

@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryPage extends BasePage {
@@ -62,7 +61,6 @@ public class InventoryPage extends BasePage {
         Select filter = new Select(driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")));
         filter.selectByVisibleText(filterName);
     }
-
 
     public boolean arePricesSorted() {
         List<WebElement> prices = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));

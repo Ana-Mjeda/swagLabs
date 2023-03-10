@@ -3,10 +3,10 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ShoppingCartTest extends BaseTest{
+public class ShoppingCartTest extends BaseTest {
 
     @Test
-    public void verifyIfProductInCart(){
+    public void verifyIfProductInCart() {
 
         loginPage.fillLoginForm(username, password);
         inventoryPage.clickAddToCartBackpack();

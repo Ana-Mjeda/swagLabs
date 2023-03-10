@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AddToCartTest extends BaseTest{
+public class AddToCartTest extends BaseTest {
 
     @BeforeMethod
     @Override
@@ -12,8 +12,9 @@ public class AddToCartTest extends BaseTest{
         super.beforeMethod();
         loginPage.fillLoginForm(username, password);
     }
+
     @Test
-    public void addToCart(){
+    public void addToCart() {
 
         //Add the first product to the cart
         inventoryPage.clickAddToCartBackpack();
@@ -25,10 +26,11 @@ public class AddToCartTest extends BaseTest{
         inventoryPage.clickAddToCartShirt();
 
         //Verify the cart badge value is increased
-        Assert.assertEquals(inventoryPage.getShoppingCartBadge().getText(), "2");}
+        Assert.assertEquals(inventoryPage.getShoppingCartBadge().getText(), "2");
+    }
 
     @Test
-    public void removeFromCart(){
+    public void removeFromCart() {
 
         inventoryPage.clickAddToCartBackpack();
         inventoryPage.clickAddToCartShirt();
