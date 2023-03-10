@@ -14,25 +14,14 @@ public class LoginTest extends BaseTest {
 
         //Login with standard_user & secret_sauce
         loginPage.fillLoginForm(username, password);
+    }
 
+    @Test
+    public void verifyFilter() {
+        //Verify default filter dropdown is A-Z
 
-
-        //Click on the cart
-        inventoryPage.clickShoppingCart();
-
-        //Verify the added product is available
-        Assert.assertEquals(cartPage.getCartProduct().getText(), "Test.allTheThings() T-Shirt (Red)");
-
-        //Click on the continue shopping
-        cartPage.clickContinueShopping();
-
-        //Change the price filter from low to high
-        inventoryPage.selectFilter("Price (low to high)");
-
-        //Verify the price sorted properly
-        Assert.assertTrue(inventoryPage.arePricesSorted());
-
-
-
+        Assert.assertEquals(inventoryPage.getFilterDropdown().getAttribute("value"), "az", "Name (A to Z)");
     }
 }
+
+

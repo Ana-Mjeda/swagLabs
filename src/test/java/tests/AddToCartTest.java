@@ -15,9 +15,6 @@ public class AddToCartTest extends BaseTest{
     @Test
     public void addToCart(){
 
-        //Verify default filter dropdown is A-Z
-        Assert.assertEquals(inventoryPage.getFilterDropdown().getAttribute("value"), "az", "Name (A to Z)");
-
         //Add the first product to the cart
         inventoryPage.clickAddToCartBackpack();
 
