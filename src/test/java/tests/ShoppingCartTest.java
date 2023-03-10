@@ -18,6 +18,9 @@ public class ShoppingCartTest extends BaseTest{
 
         //Verify the added product is available
         Assert.assertEquals(cartPage.getCartProduct().getText(), "Test.allTheThings() T-Shirt (Red)");
+
+        //Click on the continue shopping
+        cartPage.clickContinueShopping();
     }
 
 }
